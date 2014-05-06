@@ -37,9 +37,14 @@
 
 #pragma mark - Metodi d'azione
 
+- (IBAction)testOpenCV:(id)sender
+{
+    NSLog(@"testOpenCV...");
+}
+
 - (IBAction)apriCrop:(id)sender
 {
-    NSLog(@"bottone schiacciato...");
+    NSLog(@"apriCrop...");
 }
 
 @end

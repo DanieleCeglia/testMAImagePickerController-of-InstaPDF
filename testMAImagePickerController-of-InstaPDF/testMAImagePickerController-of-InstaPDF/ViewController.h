@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (IBAction)testOpenCV:(id)sender;
 - (IBAction)apriCrop:(id)sender;
 
 @end
