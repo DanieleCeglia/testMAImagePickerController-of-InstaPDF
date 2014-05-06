@@ -28,14 +28,18 @@
                         <action selector="apriCrop:" destination="-1" eventType="touchUpInside" id="kbu-5n-Q4y"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Av3-7d-whg">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Av3-7d-whg">
                     <rect key="frame" x="40" y="124" width="240" height="320"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="Cuq-22-473"/>
+                        <constraint firstAttribute="height" constant="320" id="Omh-ge-7gd"/>
+                    </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55p-la-THq">
-                    <rect key="frame" x="20" y="518" width="90" height="30"/>
+                    <rect key="frame" x="20" y="518" width="161" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Test OpenCV">
+                    <state key="normal" title="Start/stop test OpenCV">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -45,12 +49,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="55p-la-THq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="CBH-Sj-k5p"/>
                 <constraint firstAttribute="trailing" secondItem="vYf-wQ-z2z" secondAttribute="trailing" constant="20" symbolic="YES" id="Dwx-kw-fbZ"/>
                 <constraint firstAttribute="bottom" secondItem="vYf-wQ-z2z" secondAttribute="bottom" constant="20" symbolic="YES" id="FeQ-Fi-7OR"/>
                 <constraint firstItem="Av3-7d-whg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ogb-fJ-5Rp"/>
+                <constraint firstAttribute="bottom" secondItem="55p-la-THq" secondAttribute="bottom" constant="20" symbolic="YES" id="Ora-iS-at4"/>
                 <constraint firstItem="Av3-7d-whg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TmL-Gl-iee"/>
-                <constraint firstAttribute="bottom" secondItem="55p-la-THq" secondAttribute="bottom" constant="20" id="VAv-IX-Z42"/>
+                <constraint firstItem="55p-la-THq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" symbolic="YES" id="cnB-vX-wHg"/>
             </constraints>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

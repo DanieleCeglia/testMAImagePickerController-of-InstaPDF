@@ -10,7 +10,9 @@
 #import <opencv2/highgui/cap_ios.h>
 //using namespace cv;
 
-@interface ViewController : UIViewController <CvVideoCameraDelegate>
+#import "MAImagePickerController.h"
+
+@interface ViewController : UIViewController <CvVideoCameraDelegate, MAImagePickerControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *immagine;
 @property (nonatomic, strong) CvVideoCamera* videoCamera;

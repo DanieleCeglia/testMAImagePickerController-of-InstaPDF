@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+{
+    BOOL testOpenCvInEsecuzione;
+}
 @end
 
 @implementation ViewController
@@ -37,6 +39,8 @@
     self.videoCamera.grayscaleMode = NO;
     */
     self.videoCamera.delegate = self;
+    
+    testOpenCvInEsecuzione = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -72,12 +76,57 @@
 - (IBAction)testOpenCV:(id)sender
 {
     NSLog(@"testOpenCV...");
-    [self.videoCamera start];
+    
+    if (testOpenCvInEsecuzione == NO)
+    {
+        [self.videoCamera start];
+        
+        testOpenCvInEsecuzione = YES;
+    }
+    else
+    {
+        [self.videoCamera stop];
+        
+        testOpenCvInEsecuzione = NO;
+    }
 }
 
 - (IBAction)apriCrop:(id)sender
 {
     NSLog(@"apriCrop...");
+    
+    MAImagePickerController *imagePicker = [[MAImagePickerController alloc] init];
+    
+    imagePicker.delegate = self;
+    //imagePicker.sourceType = MAImagePickerControllerSourceTypeCamera;
+    
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:imagePicker];
+    
+    [self presentViewController:navigationController animated:YES completion:nil];
+}
+
+#pragma mark - MAImagePickerControllerDelegate
+
+- (void)imagePickerDidCancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)imagePickerDidChooseImageWithPath:(NSString *)path
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path])
+    {
+        NSLog(@"File Found at %@", path);
+        
+    }
+    else
+    {
+        NSLog(@"No File Found at %@", path);
+    }
+    
+    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
 }
 
 @end
