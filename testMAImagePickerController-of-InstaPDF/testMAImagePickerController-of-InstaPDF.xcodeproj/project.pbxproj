@@ -19,7 +19,7 @@
 		647ADDBB1918C1640020E1BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDA31918C1640020E1BB /* UIKit.framework */; };
 		647ADDC31918C1640020E1BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 647ADDC11918C1640020E1BB /* InfoPlist.strings */; };
 		647ADDC51918C1640020E1BB /* testMAImagePickerController_of_InstaPDFTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 647ADDC41918C1640020E1BB /* testMAImagePickerController_of_InstaPDFTests.m */; };
-		647ADDD11918C1940020E1BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 647ADDCF1918C1940020E1BB /* ViewController.m */; };
+		647ADDD11918C1940020E1BB /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 647ADDCF1918C1940020E1BB /* ViewController.mm */; };
 		647ADDD21918C1940020E1BB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647ADDD01918C1940020E1BB /* ViewController.xib */; };
 		647ADDD41918C83B0020E1BB /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDD31918C83B0020E1BB /* opencv2.framework */; };
 		647ADDD61918D1CE0020E1BB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDD51918D1CE0020E1BB /* CoreImage.framework */; };
@@ -61,7 +61,7 @@
 		647ADDC21918C1640020E1BB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		647ADDC41918C1640020E1BB /* testMAImagePickerController_of_InstaPDFTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = testMAImagePickerController_of_InstaPDFTests.m; sourceTree = "<group>"; };
 		647ADDCE1918C1940020E1BB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		647ADDCF1918C1940020E1BB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		647ADDCF1918C1940020E1BB /* ViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		647ADDD01918C1940020E1BB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		647ADDD31918C83B0020E1BB /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
 		647ADDD51918D1CE0020E1BB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -157,7 +157,7 @@
 				647ADDB11918C1640020E1BB /* Images.xcassets */,
 				647ADDA61918C1640020E1BB /* Supporting Files */,
 				647ADDCE1918C1940020E1BB /* ViewController.h */,
-				647ADDCF1918C1940020E1BB /* ViewController.m */,
+				647ADDCF1918C1940020E1BB /* ViewController.mm */,
 				647ADDD01918C1940020E1BB /* ViewController.xib */,
 			);
 			path = "testMAImagePickerController-of-InstaPDF";
@@ -288,7 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				647ADDD11918C1940020E1BB /* ViewController.m in Sources */,
+				647ADDD11918C1940020E1BB /* ViewController.mm in Sources */,
 				647ADDB01918C1640020E1BB /* AppDelegate.m in Sources */,
 				647ADDAC1918C1640020E1BB /* main.m in Sources */,
 			);

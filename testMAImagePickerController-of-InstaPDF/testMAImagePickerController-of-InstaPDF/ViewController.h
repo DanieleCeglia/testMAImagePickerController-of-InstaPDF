@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <opencv2/highgui/cap_ios.h>
+//using namespace cv;
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CvVideoCameraDelegate>
+
+@property (weak, nonatomic) IBOutlet UIImageView *immagine;
+@property (nonatomic, retain) CvVideoCamera* videoCamera;
 
 - (IBAction)testOpenCV:(id)sender;
 - (IBAction)apriCrop:(id)sender;
