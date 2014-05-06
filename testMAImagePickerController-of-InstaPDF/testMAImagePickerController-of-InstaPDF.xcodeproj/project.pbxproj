@@ -22,6 +22,15 @@
 		647ADDD11918C1940020E1BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 647ADDCF1918C1940020E1BB /* ViewController.m */; };
 		647ADDD21918C1940020E1BB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 647ADDD01918C1940020E1BB /* ViewController.xib */; };
 		647ADDD41918C83B0020E1BB /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDD31918C83B0020E1BB /* opencv2.framework */; };
+		647ADDD61918D1CE0020E1BB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDD51918D1CE0020E1BB /* CoreImage.framework */; };
+		647ADDD81918D1DC0020E1BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDD71918D1DC0020E1BB /* QuartzCore.framework */; };
+		647ADDDA1918D20D0020E1BB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDD91918D20D0020E1BB /* ImageIO.framework */; };
+		647ADDDC1918D2150020E1BB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDDB1918D2150020E1BB /* AVFoundation.framework */; };
+		647ADDDE1918D2200020E1BB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDDD1918D2200020E1BB /* MediaPlayer.framework */; };
+		647ADDE01918D2280020E1BB /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDDF1918D2280020E1BB /* CoreMedia.framework */; };
+		647ADDE21918D2300020E1BB /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDE11918D2300020E1BB /* CoreVideo.framework */; };
+		647ADDE41918D2DA0020E1BB /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDE31918D2DA0020E1BB /* AssetsLibrary.framework */; };
+		647ADDE61918D2F50020E1BB /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647ADDE51918D2F50020E1BB /* Accelerate.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,15 @@
 		647ADDCF1918C1940020E1BB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		647ADDD01918C1940020E1BB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		647ADDD31918C83B0020E1BB /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		647ADDD51918D1CE0020E1BB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		647ADDD71918D1DC0020E1BB /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		647ADDD91918D20D0020E1BB /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		647ADDDB1918D2150020E1BB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		647ADDDD1918D2200020E1BB /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		647ADDDF1918D2280020E1BB /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		647ADDE11918D2300020E1BB /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		647ADDE31918D2DA0020E1BB /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		647ADDE51918D2F50020E1BB /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +80,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				647ADDE61918D2F50020E1BB /* Accelerate.framework in Frameworks */,
+				647ADDE41918D2DA0020E1BB /* AssetsLibrary.framework in Frameworks */,
+				647ADDE21918D2300020E1BB /* CoreVideo.framework in Frameworks */,
+				647ADDE01918D2280020E1BB /* CoreMedia.framework in Frameworks */,
+				647ADDDE1918D2200020E1BB /* MediaPlayer.framework in Frameworks */,
+				647ADDDC1918D2150020E1BB /* AVFoundation.framework in Frameworks */,
+				647ADDDA1918D20D0020E1BB /* ImageIO.framework in Frameworks */,
+				647ADDD81918D1DC0020E1BB /* QuartzCore.framework in Frameworks */,
+				647ADDD61918D1CE0020E1BB /* CoreImage.framework in Frameworks */,
 				647ADDA21918C1640020E1BB /* CoreGraphics.framework in Frameworks */,
 				647ADDA41918C1640020E1BB /* UIKit.framework in Frameworks */,
 				647ADDD41918C83B0020E1BB /* opencv2.framework in Frameworks */,
@@ -104,6 +131,15 @@
 		647ADD9E1918C1640020E1BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				647ADDE51918D2F50020E1BB /* Accelerate.framework */,
+				647ADDE31918D2DA0020E1BB /* AssetsLibrary.framework */,
+				647ADDE11918D2300020E1BB /* CoreVideo.framework */,
+				647ADDDF1918D2280020E1BB /* CoreMedia.framework */,
+				647ADDDD1918D2200020E1BB /* MediaPlayer.framework */,
+				647ADDDB1918D2150020E1BB /* AVFoundation.framework */,
+				647ADDD91918D20D0020E1BB /* ImageIO.framework */,
+				647ADDD71918D1DC0020E1BB /* QuartzCore.framework */,
+				647ADDD51918D1CE0020E1BB /* CoreImage.framework */,
 				647ADDD31918C83B0020E1BB /* opencv2.framework */,
 				647ADD9F1918C1640020E1BB /* Foundation.framework */,
 				647ADDA11918C1640020E1BB /* CoreGraphics.framework */,
