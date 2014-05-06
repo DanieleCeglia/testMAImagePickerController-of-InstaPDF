@@ -29,13 +29,13 @@
     // Do any additional setup after loading the view from its nib.
     
     self.videoCamera = [[CvVideoCamera alloc] initWithParentView:_immagine];
+    /*
     self.videoCamera.defaultAVCaptureDevicePosition = AVCaptureDevicePositionFront;
     self.videoCamera.defaultAVCaptureSessionPreset = AVCaptureSessionPresetPhoto;
     self.videoCamera.defaultAVCaptureVideoOrientation = AVCaptureVideoOrientationPortrait;
     self.videoCamera.defaultFPS = 30;
     self.videoCamera.grayscaleMode = NO;
-    
-    self.videoCamera = [[CvVideoCamera alloc] initWithParentView:_immagine];
+    */
     self.videoCamera.delegate = self;
 }
 

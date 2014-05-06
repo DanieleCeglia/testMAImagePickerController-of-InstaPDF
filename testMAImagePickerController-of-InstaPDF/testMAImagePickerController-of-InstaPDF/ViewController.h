@@ -13,7 +13,7 @@
 @interface ViewController : UIViewController <CvVideoCameraDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *immagine;
-@property (nonatomic, retain) CvVideoCamera* videoCamera;
+@property (nonatomic, strong) CvVideoCamera* videoCamera;
 
 - (IBAction)testOpenCV:(id)sender;
 - (IBAction)apriCrop:(id)sender;
