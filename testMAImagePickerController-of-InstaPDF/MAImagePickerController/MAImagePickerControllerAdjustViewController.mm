@@ -133,11 +133,11 @@
         int min = [[points valueForKeyPath:@"@min.value"] intValue];
         int max = [[points valueForKeyPath:@"@max.value"] intValue];
         
-        int minIndex;
-        int maxIndex;
+        int minIndex = nil;
+        int maxIndex = nil;
         
-        int missingIndexOne;
-        int missingIndexTwo;
+        int missingIndexOne = nil;
+        int missingIndexTwo = nil;
         
         for (int i = 0; i < 4; i++)
         {
@@ -381,7 +381,7 @@ void find_largest_square(const cv::vector<cv::vector<cv::Point> >& squares, cv::
         {
             max_width = rectangle.width;
             max_height = rectangle.height;
-            max_square_idx = i;
+            max_square_idx = (int)i;
         }
     }
     

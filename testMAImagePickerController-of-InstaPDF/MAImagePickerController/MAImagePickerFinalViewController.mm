@@ -86,7 +86,7 @@
     
     if ([[NSUserDefaults standardUserDefaults] objectForKey:@"maimagepickercontrollerlasteditchoice"])
     {
-        selectThis = [[NSUserDefaults standardUserDefaults] integerForKey:@"maimagepickercontrollerlasteditchoice"];
+        selectThis = (int)[[NSUserDefaults standardUserDefaults] integerForKey:@"maimagepickercontrollerlasteditchoice"];
     }
     else
     {
@@ -257,7 +257,7 @@
         [_progressIndicator setHidden:NO];
         [_progressIndicator startAnimating];
         
-        currentlySelected = control.tag;
+        currentlySelected = (int)control.tag;
         [[NSUserDefaults standardUserDefaults] setInteger:currentlySelected forKey:@"maimagepickercontrollerlasteditchoice"];
         
         [_firstSettingIcon setSelected:NO];
@@ -270,7 +270,7 @@
         [_thirdSettingIcon setEnabled:YES];
         [_fourthSettingIcon setEnabled:YES];
         
-        int activityIndicatorOffset;
+        int activityIndicatorOffset = nil;
         
         
         switch (control.tag) {

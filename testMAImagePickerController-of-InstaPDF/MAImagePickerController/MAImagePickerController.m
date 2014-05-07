@@ -29,6 +29,30 @@
 
 @synthesize invokeCamera = _invokeCamera;
 
+- (BOOL)setUpAudioSession
+{
+    BOOL success = NO;
+    NSError *error = nil;
+    
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    
+    success = [session setCategory:AVAudioSessionCategoryPlayback error:&error];
+    if (!success) {
+        NSLog(@"%@ Error setting category: %@",
+              NSStringFromSelector(_cmd), [error localizedDescription]);
+        
+        // Exit early
+        return success;
+    }
+    
+    success = [session setActive:YES error:&error];
+    if (!success) {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    
+    return success;
+}
+
 - (void)viewDidLoad
 {
     [self.navigationController setNavigationBarHidden:YES];
@@ -41,18 +65,24 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(MAImagePickerChosen:) name:@"MAIPCSuccessInternal" object:nil];
         
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationWillEnterForegroundNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification){
-            AudioSessionInitialize(NULL, NULL, NULL, NULL);
-            AudioSessionSetActive(YES);
+            //AudioSessionInitialize(NULL, NULL, NULL, NULL);
+            //AudioSessionSetActive(YES);
+            
+            [self setUpAudioSession];
         }];
         
         [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidEnterBackgroundNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *notification)
          {
-             AudioSessionSetActive(NO);
+             //AudioSessionSetActive(YES);
+             
+             [self setUpAudioSession];
          }];
         
         
-        AudioSessionInitialize(NULL, NULL, NULL, NULL);
-        AudioSessionSetActive(YES);
+        //AudioSessionInitialize(NULL, NULL, NULL, NULL);
+        //AudioSessionSetActive(YES);
+        
+        [self setUpAudioSession];
         
         // Volume View to hide System HUD
         _volumeView = [[MPVolumeView alloc] initWithFrame:CGRectMake(-100, 0, 10, 0)];
@@ -286,13 +316,25 @@
     _captureManager = nil;
 }
 
+- (BOOL)tearDownAudioSession
+{
+    NSError *deactivationError = nil;
+    BOOL success = [[AVAudioSession sharedInstance] setActive:NO error:&deactivationError];
+    if (!success) {
+        NSLog(@"%@", [deactivationError localizedDescription]);
+    }
+    return success;
+}
+
 - (void)dismissMAImagePickerController
 {
     [self removeNotificationObservers];
     if (_sourceType == MAImagePickerControllerSourceTypeCamera && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
         [[_captureManager captureSession] stopRunning];
-        AudioSessionSetActive(NO);
+        //AudioSessionSetActive(NO);
+        
+        [self tearDownAudioSession];
     }
     else
     {
@@ -304,7 +346,9 @@
 
 - (void) MAImagePickerChosen:(NSNotification *)notification
 {
-    AudioSessionSetActive(NO);
+    //AudioSessionSetActive(NO);
+    
+    [self tearDownAudioSession];
     
     [self removeNotificationObservers];
     [_delegate imagePickerDidChooseImageWithPath:[notification object]];
