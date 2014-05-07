@@ -41,7 +41,7 @@ typedef NS_ENUM(NSInteger, MAImagePickerControllerSourceType)
 
 @property (strong ,nonatomic) UIImagePickerController *invokeCamera;
 
-@property MAImagePickerControllerSourceType *sourceType;
+@property MAImagePickerControllerSourceType sourceType;
 
 @property (strong, nonatomic) MPVolumeView *volumeView;
 

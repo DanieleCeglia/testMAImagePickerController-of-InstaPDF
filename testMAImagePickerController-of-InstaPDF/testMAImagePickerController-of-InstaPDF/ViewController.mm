@@ -99,6 +99,7 @@
     
     imagePicker.delegate = self;
     //imagePicker.sourceType = MAImagePickerControllerSourceTypeCamera;
+    imagePicker.sourceType = MAImagePickerControllerSourceTypePhotoLibrary;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:imagePicker];
     
