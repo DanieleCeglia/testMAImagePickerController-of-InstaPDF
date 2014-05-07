@@ -664,7 +664,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testMAImagePickerController-of-InstaPDF/testMAImagePickerController-of-InstaPDF-Prefix.pch";
 				INFOPLIST_FILE = "testMAImagePickerController-of-InstaPDF/testMAImagePickerController-of-InstaPDF-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -681,7 +683,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "testMAImagePickerController-of-InstaPDF/testMAImagePickerController-of-InstaPDF-Prefix.pch";
 				INFOPLIST_FILE = "testMAImagePickerController-of-InstaPDF/testMAImagePickerController-of-InstaPDF-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -745,6 +749,7 @@
 				647ADDCA1918C1640020E1BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		647ADDCB1918C1640020E1BB /* Build configuration list for PBXNativeTarget "testMAImagePickerController-of-InstaPDFTests" */ = {
 			isa = XCConfigurationList;
@@ -753,6 +758,7 @@
 				647ADDCD1918C1640020E1BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
