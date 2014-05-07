@@ -12,7 +12,7 @@
 
 #import "MAImagePickerController.h"
 
-@interface ViewController : UIViewController <CvVideoCameraDelegate, MAImagePickerControllerDelegate>
+@interface ViewController : UIViewController <CvVideoCameraDelegate, MAImagePickerControllerDelegate, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *immagine;
 @property (nonatomic, strong) CvVideoCamera* videoCamera;

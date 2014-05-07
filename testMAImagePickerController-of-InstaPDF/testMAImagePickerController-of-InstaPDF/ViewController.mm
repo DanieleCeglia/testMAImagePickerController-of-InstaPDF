@@ -95,11 +95,26 @@
 {
     NSLog(@"apriCrop...");
     
+    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Elabora foto da" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
+                            @"Scatta nuova",
+                            @"Prendi da libreria",
+                            nil];
+    
+    [popup showInView:[UIApplication sharedApplication].keyWindow];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
     MAImagePickerController *imagePicker = [[MAImagePickerController alloc] init];
     
     imagePicker.delegate = self;
+    
+    if (buttonIndex == 1)
+    {
+        imagePicker.sourceType = MAImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
     //imagePicker.sourceType = MAImagePickerControllerSourceTypeCamera;
-    imagePicker.sourceType = MAImagePickerControllerSourceTypePhotoLibrary;
     
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:imagePicker];
     
