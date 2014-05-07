@@ -120,6 +120,9 @@
     {
         NSLog(@"File Found at %@", path);
         
+        NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
+        
+        self.immagine.image = [UIImage imageWithData:data];
     }
     else
     {
