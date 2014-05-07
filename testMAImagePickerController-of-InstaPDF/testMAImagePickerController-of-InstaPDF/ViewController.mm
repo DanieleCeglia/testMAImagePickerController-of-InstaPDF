@@ -95,6 +95,10 @@
 {
     NSLog(@"apriCrop...");
     
+    [self.videoCamera stop];
+    
+    testOpenCvInEsecuzione = NO;
+    
     UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Elabora foto da"
                                                        delegate:self
                                               cancelButtonTitle:@"Annulla"
