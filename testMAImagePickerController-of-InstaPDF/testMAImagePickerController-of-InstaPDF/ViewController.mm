@@ -95,10 +95,11 @@
 {
     NSLog(@"apriCrop...");
     
-    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Elabora foto da" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
-                            @"Scatta nuova",
-                            @"Prendi da libreria",
-                            nil];
+    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Elabora foto da"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Annulla"
+                                         destructiveButtonTitle:nil
+                                              otherButtonTitles:@"Scatta nuova", @"Prendi da libreria", nil];
     
     [popup showInView:[UIApplication sharedApplication].keyWindow];
 }
